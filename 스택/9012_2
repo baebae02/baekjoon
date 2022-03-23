@@ -1,0 +1,18 @@
+def strcheck(str):
+    li = []
+    for i in str:
+        if len(li)==0 and i==')':
+            return "NO"
+        elif i == "(":
+            li.append(i)
+        elif i == ")":
+            li.pop()
+    if li.count("(") == 0:
+        return "YES"
+    else:
+        return "NO"
+N = int(input())
+for i in range(N):
+    # str = sys.stdin.readline()
+    str = input()
+    print(strcheck(str))
